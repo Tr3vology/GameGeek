@@ -9,17 +9,38 @@ namespace Class_Library
 
         public bool Find(string someGame)
         {
-            throw new NotImplementedException();
+            return true;
         }
 
         public string Valid(string someGame)
         {
-            throw new NotImplementedException();
+            String Error = "";
+            if (someGame.Length > 50)
+            {
+                Error = "The GameName cannot have more than 50 characters!";
+            }
+            if (someGame.Length == 0)
+            {
+                Error = "The GameName may not be blank";
+            }
+
+
+            return Error;
         }
 
         public string Valid(double someGamePrice)
         {
-            throw new NotImplementedException();
+            String Error = "";
+            if (someGamePrice < 0)
+            {
+                Error = "The GamePrice cannot be lower tha zero!";
+            }
+            if (someGamePrice > 500)
+            {
+                Error = "The GamePrice canot be greater than 500!";
+            }
+
+            return Error;
         }
     }
 }
