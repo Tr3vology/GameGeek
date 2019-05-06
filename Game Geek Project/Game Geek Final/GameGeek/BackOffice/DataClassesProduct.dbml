@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="GameGeekProduct" Class="DataClasses2DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=&quot;C:\Users\Smart\Desktop\Final Project Work\Game Geek Finalllllllllllllllllllllllllllllllllllllllllllllllllllllllll\GameGeek\GameGeekFrontEnd\App_Data\GameGeekProduct.MDF&quot;;Integrated Security=True;Connect Timeout=30" SettingsObjectName="BackOffice.Properties.Settings" SettingsPropertyName="GameGeekProductConnectionString" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.GetGameNo" Method="GetGameNo">
+    <ElementType Name="GetGameNoResult">
+      <Column Name="GameNo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sproc_GetAllGame" Method="sproc_GetAllGame">
+    <ElementType Name="sproc_GetAllGameResult">
+      <Column Name="GameNo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Console" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Price" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="ImagePath" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="ImagePic" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>
