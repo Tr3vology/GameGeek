@@ -1,0 +1,48 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="GameGeek.master.cs" Inherits="GameGeek" %>
+
+<!DOCTYPE html>
+
+<html>
+    <head id="Head1" runat="server">
+        <title>Game Geek</title>
+        <link href="GameGeek.css" rel="stylesheet" type="text/css" />
+        <style type="text/css">
+            .auto-style1 {
+                left: 14%;
+                top: 19%;
+            }
+            .auto-style2 {
+                position: absolute;
+                top: 15px;
+                left: 1430px;
+                z-index: 1;
+                height: 79px;
+                width: 106px;
+            }
+        </style>
+    </head>
+    <body>
+        <form id="form1" runat="server">
+ 
+             <header>
+                 Game Geek<br />
+                 <br />
+                 <asp:HyperLink ID="hypSignIn" runat="server" NavigateUrl="~/SignIn.aspx">Sign In-</asp:HyperLink>
+                 <asp:HyperLink ID="hypSignUp" runat="server" NavigateUrl="~/SignUp.aspx">Sign Up-</asp:HyperLink>
+                 <asp:HyperLink ID="hypChangePassword" runat="server" NavigateUrl="~/ChangePassword.aspx">Change Password-</asp:HyperLink>
+                 <asp:HyperLink ID="hypSignOut" runat="server" NavigateUrl="~/SignOut.aspx">Sign Out-</asp:HyperLink>
+                 <asp:HyperLink ID="hypReSet" runat="server" NavigateUrl="~/ReSet.aspx">Re-Set Password-</asp:HyperLink>
+             </header>
+ 
+            <article class="auto-style1">
+                <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </article>
+  
+            <footer>
+                Footer text here
+            </footer>
+             <asp:Image ID="Image1" runat="server" CssClass="auto-style2" ImageUrl="~/Pictures/15 Logo.png" />
+        </form>
+    </body>
+</html>
